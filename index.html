@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENÜ</title>
+
+  <!-- 🔥 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('./background.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      background: url('./backgroundandlogo.jpg') no-repeat center center/cover;
+      border-radius: 20px;
+      padding: 30px 20px 35px;
+      width: 90%;
+      max-width: 380px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 5px;
+    }
+
+    /* 🔥 여기 핵심 변경 */
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      margin-bottom: 25px;
+      letter-spacing: 5px;
+      font-weight: 600;
+      color: black;
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .tab {
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      letter-spacing: 1px;
+      line-height: 1.3;
+    }
+
+    .tab:hover {
+      background: rgba(255,255,255,0.95);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .tab:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 400px) {
+      .logo {
+        width: 90px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="./logo.png" alt="로고" class="logo">
+
+    <h1>MENÜ</h1>
+
+    <div class="tabs">
+      <div class="tab" onclick="goTo('starter.html')">Başlangıçlar - Starters</div>
+      <div class="tab" onclick="goTo('warm-starter.html')">Ara Sıcaklar - Warm Starters</div>
+      <div class="tab" onclick="goTo('salad.html')">Salatalar - Salads</div>
+      <div class="tab" onclick="goTo('pasta.html')">Makarnalar - Pastas</div>
+      <div class="tab" onclick="goTo('main.html')">Ana Yemekler - Main Dishes</div>
+      <div class="tab" onclick="goTo('korean.html')">Koreden - From Korea</div>
+      <div class="tab" onclick="goTo('dessert.html')">Tatlılar - Desserts</div>
+    </div>
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>
